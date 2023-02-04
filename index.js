@@ -13,7 +13,7 @@ app.use((req, res, next)=>{
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MANGO_DB)
 .then(()=>{
-    app.listen(process.env.PORT)
+    app.listen(process.env.PORT || 4000)
 })
 .catch((error)=>{
     console.log(error);
