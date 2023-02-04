@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 const app = express();
 const routes = require('./routes/routes')
 
+var cors = require('cors')
+
+app.use(cors()) 
+
 app.use(express.json())
 app.use((req, res, next)=>{
     console.log(req.path , req.method);
